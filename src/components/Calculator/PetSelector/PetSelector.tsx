@@ -1,5 +1,5 @@
 import { ChangeEvent, Dispatch, SetStateAction } from "react";
-import { capitalize } from "../../../logic/customize-options";
+import { capitalize } from "../../../logic/customize-strings";
 import { Pet } from "../../../logic/interfaces";
 
 export default function PetSelector({ pets, setSelectedPet }: {
@@ -9,7 +9,6 @@ export default function PetSelector({ pets, setSelectedPet }: {
 
     const handleChange = (newPet: Pet) => {
         setSelectedPet(newPet);
-        console.log(newPet);
     }
 
     return (
