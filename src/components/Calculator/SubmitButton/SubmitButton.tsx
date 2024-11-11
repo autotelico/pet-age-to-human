@@ -3,6 +3,7 @@ export default function SubmitButton({text, cb}: {
     cb: () => void,
 }): JSX.Element {
     return (
-        <button type="button" onClick={cb}>{text || 'Submit'}</button>
+        <button type="button" onClick={cb}
+        className="bg-purple-500">{text || 'Submit'}</button>
     )
 }

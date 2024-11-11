@@ -12,7 +12,8 @@ export default function PetSelector({ pets, setSelectedPet }: {
     }
 
     return (
-        <select name="species" id="species" defaultValue={""} onChange={(e: ChangeEvent<HTMLSelectElement>) => handleChange(e.target.value as Pet)}>
+        <select name="species" id="species" defaultValue={""} onChange={(e: ChangeEvent<HTMLSelectElement>) => handleChange(e.target.value as Pet)}
+        className="rounded-md">
             <option value="">-</option>
             {pets.map((pet, i) =>
                 <option key={i} value={pet}>{capitalize(pet)}</option>

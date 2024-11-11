@@ -26,7 +26,7 @@ function App() {
             <h3>{`Your ${selectedPet} is ${resultAge} years old in human years.`}</h3>
           }
           <Calculator.PetSelector pets={petOptions} setSelectedPet={setSelectedPet} />
-          <Calculator.Input cb={setPetAge} />
+          <Calculator.Input labelText='Pet age' inputId='pet-age' cb={setPetAge} type='number' width={1000} labelTextColor='black' inputTextColor='white' />
           <Calculator.SubmitButton cb={displayResultAge} />
         </>
       </Calculator.Container>
