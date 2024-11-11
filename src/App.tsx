@@ -22,9 +22,8 @@ function App() {
     <>
       <Calculator.Container>
         <>
-          <h2>{selectedPet}</h2>
           {resultAge &&
-            <h3>{`Your pet is ${resultAge} years old in human years.`}</h3>
+            <h3>{`Your ${selectedPet} is ${resultAge} years old in human years.`}</h3>
           }
           <Calculator.PetSelector pets={petOptions} setSelectedPet={setSelectedPet} />
           <Calculator.Input cb={setPetAge} />
