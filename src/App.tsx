@@ -8,12 +8,14 @@ import { getHumanAge } from './logic/get-ages';
 
 function App() {
   const [selectedPet, setSelectedPet] = useState<Pet | undefined>();
-  const [petAge, setPetAge] = useState<number | undefined>();
-  const [resultAge, setResultAge] = useState<number | undefined>();
+  const [petAge, setPetAge] = useState<string | undefined>();
+  const [resultAge, setResultAge] = useState<string | undefined>();
 
   const displayResultAge = () => {
-    const resultAge = getHumanAge(petAge!, selectedPet!);
-    setResultAge(Number(resultAge.toFixed(0)));
+    if (petAge) {
+      const resultAge = getHumanAge(Number(petAge!), selectedPet!);
+      setResultAge(resultAge.toFixed(0));
+    }
   }
 
   return (
