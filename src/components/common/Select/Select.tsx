@@ -1,6 +1,6 @@
 import { ChangeEvent, Dispatch, SetStateAction } from "react";
-import { capitalize } from "../../../logic/customize-strings";
-import { Pet } from "../../../logic/interfaces";
+import { capitalize } from "../../../utils/customize-strings";
+import { Pet } from "../../../types/interfaces";
 
 export default function Select({ pets, setSelectedPet }: {
     pets: string[],

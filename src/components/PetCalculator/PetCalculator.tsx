@@ -4,9 +4,9 @@ import Label from "../common/Label/Label";
 import Input from "../common/Input/Input";
 import Select from "../common/Select/Select";
 import SubmitButton from "../common/SubmitButton/SubmitButton";
-import { getHumanAge } from "../../logic/get-ages";
+import { getHumanAge } from "../../utils/get-ages";
 import { petOptions } from "../../logic/options";
-import { Pet } from "../../logic/interfaces";
+import { Pet } from "../../types/interfaces";
 
 
 export default function Calculator(): React.ReactNode {

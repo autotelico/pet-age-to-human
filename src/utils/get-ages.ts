@@ -1,10 +1,10 @@
-import { Pet } from "./interfaces";
+import { Pet } from "../types/interfaces";
 
 const AVG_HUMAN_LIFE_EXPECTANCY = 72;
-const petLifeExpectancy = {
+const petLifeExpectancy: Record<Pet, number> = {
     cat: 14,
     dog: 10,
-}
+} as const;
 
 
 function getHumanAge(petAge: number, petSpecies: Pet): number {
