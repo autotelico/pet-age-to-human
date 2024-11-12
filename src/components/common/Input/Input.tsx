@@ -1,4 +1,4 @@
-import { ChangeEvent, Dispatch, SetStateAction } from "react";
+import { ChangeEvent } from "react";
 
 export default function Input({ inputId, labelText, cb, labelTextColor, inputTextColor, type, height, width }: {
     inputId: string,

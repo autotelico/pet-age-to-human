@@ -2,7 +2,7 @@ import { ChangeEvent, Dispatch, SetStateAction } from "react";
 import { capitalize } from "../../../logic/customize-strings";
 import { Pet } from "../../../logic/interfaces";
 
-export default function PetSelector({ pets, setSelectedPet }: {
+export default function Select({ pets, setSelectedPet }: {
     pets: string[],
     setSelectedPet: Dispatch<SetStateAction<Pet | undefined>>,
 }): JSX.Element {
