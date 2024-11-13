@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 function Label({ id, labelText, labelTextColor }: {
     id: string,
     labelText: string,
