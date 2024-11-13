@@ -11,21 +11,29 @@ export default function Input({ inputId, labelText, cb, labelTextColor, inputTex
     width?: number,
 }): JSX.Element {
 
-    const handleChange = (newAge: string) => {
-        cb(newAge);
+    const labelClasses = [
+        labelTextColor && `text-${labelTextColor}`
+    ].filter(Boolean).join(' ');
+
+    console.log(labelClasses)
+    
+    const inputClasses = [
+        'rounded-md',
+        'm-1',
+        height && `h-[${height}px]`,
+        width && `w-[${width}px]`,
+        inputTextColor && `text-${inputTextColor}`,
+    ].filter(Boolean).join(' ');
+
+    const handleChange = (newValue: string | number) => {
+        cb(newValue);
     }
 
     return (
-        <div className={`${labelTextColor ? `text-${labelTextColor}` : ''}`}>
-
-            <label htmlFor={inputId}>{labelText}
+        <div className='flex flex-col gap-1 justify-left'>
+            <label htmlFor={inputId} className={labelClasses}>{labelText}</label>
                 <input id={inputId} type={type} onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(String(e.target.value))}
-                    className={`rounded-md m-1 
-                    ${height ? `h-[${height}px]` : ''} 
-                    ${width ? `w-[${width}px]` : ''}
-                    ${inputTextColor ? `text-${inputTextColor}` : ''}
-                    `} />
-            </label>
+                    className={inputClasses} />
         </div>
     )
 }

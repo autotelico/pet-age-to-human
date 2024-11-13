@@ -1,5 +1,5 @@
 import './styles/App.css'
-import Calculator from './components/PetCalculator/PetCalculator'
+import PetCalculator from './components/PetCalculator/PetCalculator'
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Calculator />
+      <PetCalculator />
     </>
   )
 }

@@ -5,7 +5,7 @@ import Input from "../common/Input/Input";
 import Select from "../common/Select/Select";
 import SubmitButton from "../common/SubmitButton/SubmitButton";
 import { getHumanAge } from "../../utils/get-ages";
-import { petOptions } from "../../logic/options";
+import { petOptions } from "../../constants/options";
 import { Pet } from "../../types/interfaces";
 
 
@@ -21,16 +21,21 @@ export default function Calculator(): React.ReactNode {
         }
     }
     return (
-        <Container>
-            <>
-                {resultAge &&
-                    <h3>{`Your ${selectedPet} is ${resultAge} years old in human years.`}</h3>
-                }
-                <Label id="select-pet" labelText='Select your pet' labelTextColor='black' />
-                <Select pets={petOptions} setSelectedPet={setSelectedPet} />
-                <Input labelText='Pet age' inputId='pet-age' cb={setPetAge} type='number' width={1000} labelTextColor='black' inputTextColor='white' />
-                <SubmitButton cb={displayResultAge} />
-            </>
-        </Container>
+        <>
+            {resultAge &&
+                <h3>{`Your ${selectedPet} is ${resultAge} years old in human years.`}</h3>
+            }
+            <Container>
+                <>
+                    <div>
+                        <Select id="select-pet" labelText="Select your pet" pets={petOptions} setSelectedPet={setSelectedPet} />
+                    </div>
+                    <div>
+                        <Input labelText='Pet age' inputId='pet-age' cb={setPetAge} type='number' width={10} labelTextColor='slate-500' inputTextColor='white' />
+                    </div>
+                    <SubmitButton cb={displayResultAge} />
+                </>
+            </Container>
+        </>
     )
 }

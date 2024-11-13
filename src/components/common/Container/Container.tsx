@@ -4,7 +4,7 @@ export default function Container({children}: {
 }): JSX.Element {
     return (
         <div id="calculator-container"
-        className="bg-slate-200 p-4 rounded-md">
+        className="flex flex-col gap-2 bg-slate-500 p-4 rounded-md">
             {children}
         </div>
     )
