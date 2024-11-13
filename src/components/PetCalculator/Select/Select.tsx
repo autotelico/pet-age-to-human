@@ -6,7 +6,7 @@ export default function Select({ id, labelText, pets, setSelectedPet }: {
     id: string,
     labelText: string,
     pets: string[],
-    setSelectedPet: Dispatch<SetStateAction<Pet | undefined>>,
+    setSelectedPet: (newPet: Pet) => void,
 }): JSX.Element {
 
     const handleChange = (newPet: Pet) => {
@@ -14,10 +14,9 @@ export default function Select({ id, labelText, pets, setSelectedPet }: {
     }
 
     return (
-        <div className=""
-        // "flex flex-col gap-1"
+        <div className="grid gap-2"
         >
-            <label htmlFor={id}>{labelText}</label>
+            <label htmlFor={id} className="block">{labelText}</label>
             <select name={id} id={id} defaultValue={""} onChange={(e: ChangeEvent<HTMLSelectElement>) => handleChange(e.target.value as Pet)}
                 className="rounded-md">
                 <option value="">-</option>
