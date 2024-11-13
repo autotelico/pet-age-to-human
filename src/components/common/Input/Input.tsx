@@ -30,7 +30,9 @@ export default function Input({ inputId, labelText, cb, labelTextColor, inputTex
     }
 
     return (
-        <div className='flex flex-col gap-1 justify-left'>
+        <div className=''
+        // 'flex flex-col gap-1 justify-left'
+        >
             <label htmlFor={inputId} className={labelClasses}>{labelText}</label>
                 <input id={inputId} type={type} onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(String(e.target.value))}
                     className={inputClasses} />

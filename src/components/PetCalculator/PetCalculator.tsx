@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Container from "../common/Container/Container";
-import Label from "../common/Label/Label";
 import Input from "../common/Input/Input";
 import Select from "../common/Select/Select";
 import SubmitButton from "../common/SubmitButton/SubmitButton";
@@ -25,13 +24,13 @@ export default function Calculator(): React.ReactNode {
             {resultAge &&
                 <h3>{`Your ${selectedPet} is ${resultAge} years old in human years.`}</h3>
             }
-            <Container>
+            <Container id="calculator-container">
                 <>
                     <div>
                         <Select id="select-pet" labelText="Select your pet" pets={petOptions} setSelectedPet={setSelectedPet} />
                     </div>
                     <div>
-                        <Input labelText='Pet age' inputId='pet-age' cb={setPetAge} type='number' width={10} labelTextColor='slate-500' inputTextColor='white' />
+                        <Input labelText='Pet age' inputId='pet-age' cb={setPetAge} type='number' labelTextColor='slate-500' inputTextColor='white' />
                     </div>
                     <SubmitButton cb={displayResultAge} />
                 </>

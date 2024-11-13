@@ -14,7 +14,9 @@ export default function Select({ id, labelText, pets, setSelectedPet }: {
     }
 
     return (
-        <div className="flex flex-col gap-1">
+        <div className=""
+        // "flex flex-col gap-1"
+        >
             <label htmlFor={id}>{labelText}</label>
             <select name={id} id={id} defaultValue={""} onChange={(e: ChangeEvent<HTMLSelectElement>) => handleChange(e.target.value as Pet)}
                 className="rounded-md">
