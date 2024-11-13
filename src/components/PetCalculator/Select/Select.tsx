@@ -1,4 +1,4 @@
-import { ChangeEvent, Dispatch, SetStateAction } from "react";
+import { ChangeEvent } from "react";
 import { capitalize } from "../../../utils/customize-strings";
 import { Pet } from "../../../types/interfaces";
 
